@@ -1,0 +1,195 @@
+[
+    {
+        "id": "76f2a81b887eafeb",
+        "type": "tab",
+        "label": "Init",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5874e2baa99ac045",
+        "type": "mqtt-broker",
+        "name": "raspy",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "541d94e2a8a24745",
+        "type": "websocket-listener",
+        "path": "ws://localhost:12101/api/events/wake",
+        "wholemsg": "false"
+    },
+    {
+        "id": "6a240638238f055f",
+        "type": "websocket-listener",
+        "path": "ws://localhost:12101/api/events/intent",
+        "wholemsg": "true"
+    },
+    {
+        "id": "70a9ed9365f02f12",
+        "type": "websocket-listener",
+        "path": "",
+        "wholemsg": "true"
+    },
+    {
+        "id": "db0b1b6587e201a4",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f00ea32432953691",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD.MM.YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "2f1edd1448f49d25",
+        "type": "ui_group",
+        "name": "Sprachsteuerung",
+        "tab": "db0b1b6587e201a4",
+        "order": 1,
+        "disp": true,
+        "width": "3",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "811392c8477ad1a7",
+        "type": "remote-config",
+        "name": "Node-RED UI",
+        "host": "192.168.137.26",
+        "protocol": "https",
+        "port": "1880",
+        "baseurl": "/ui",
+        "instancehash": "8txovi2ds7chz5gwjl0b8nwevmgjsn6m6wwio0qafuaou9lmkmymk057bt0oybc4",
+        "server": "nodered02.remote-red.com",
+        "region": "de"
+    },
+    {
+        "id": "281bacc71604fa08",
+        "type": "link out",
+        "z": "76f2a81b887eafeb",
+        "name": "Stopp",
+        "mode": "link",
+        "links": [
+            "e95e0f17502fd129"
+        ],
+        "x": 1525,
+        "y": 560,
+        "wires": []
+    }
+]
