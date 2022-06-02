@@ -2,54 +2,34 @@
     {
         "id": "76f2a81b887eafeb",
         "type": "tab",
-        "label": "Init",
+        "label": "CPU_Temp",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "5874e2baa99ac045",
-        "type": "mqtt-broker",
-        "name": "raspy",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "sessionExpiry": ""
+        "id": "9d793f48ed5db80f",
+        "type": "tab",
+        "label": "Work Memory",
+        "disabled": false,
+        "info": "",
+        "env": []
     },
     {
-        "id": "541d94e2a8a24745",
-        "type": "websocket-listener",
-        "path": "ws://localhost:12101/api/events/wake",
-        "wholemsg": "false"
+        "id": "a653bc9d2e7ed8d6",
+        "type": "tab",
+        "label": "sd_card",
+        "disabled": false,
+        "info": "",
+        "env": []
     },
     {
-        "id": "6a240638238f055f",
-        "type": "websocket-listener",
-        "path": "ws://localhost:12101/api/events/intent",
-        "wholemsg": "true"
-    },
-    {
-        "id": "70a9ed9365f02f12",
-        "type": "websocket-listener",
-        "path": "",
-        "wholemsg": "true"
+        "id": "9b4482b694ffc9f4",
+        "type": "tab",
+        "label": "CPU",
+        "disabled": false,
+        "info": "",
+        "env": []
     },
     {
         "id": "db0b1b6587e201a4",
@@ -157,270 +137,812 @@
         }
     },
     {
-        "id": "2f1edd1448f49d25",
+        "id": "796aac26f756f946",
         "type": "ui_group",
-        "name": "Sprachsteuerung",
+        "name": "CPU_Temp",
         "tab": "db0b1b6587e201a4",
         "order": 1,
         "disp": true,
-        "width": "3",
+        "width": "6",
         "collapse": false,
         "className": ""
     },
     {
-        "id": "811392c8477ad1a7",
-        "type": "remote-config",
-        "name": "Node-RED UI",
-        "host": "192.168.137.26",
-        "protocol": "https",
-        "port": "1880",
-        "baseurl": "/ui",
-        "instancehash": "8txovi2ds7chz5gwjl0b8nwevmgjsn6m6wwio0qafuaou9lmkmymk057bt0oybc4",
-        "server": "nodered02.remote-red.com",
-        "region": "de"
+        "id": "f059812355c12d6a",
+        "type": "ui_group",
+        "name": "Work Memory",
+        "tab": "db0b1b6587e201a4",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
-        "id": "7b33771d75c79a3f",
-        "type": "websocket in",
+        "id": "b2576e7f32ec6ca2",
+        "type": "ui_group",
+        "name": "SD-Card",
+        "tab": "db0b1b6587e201a4",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "332991278a8f45e5",
+        "type": "ui_group",
+        "name": "CPU-Utilization",
+        "tab": "db0b1b6587e201a4",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c4292d3e68858c74",
+        "type": "inject",
         "z": "76f2a81b887eafeb",
         "name": "",
-        "server": "6a240638238f055f",
-        "client": "",
-        "x": 340,
-        "y": 300,
-        "wires": [
-            [
-                "d279f2438e8dda81",
-                "654f7e26cd220aa1"
-            ]
-        ]
-    },
-    {
-        "id": "69a754436e5343ea",
-        "type": "link out",
-        "z": "76f2a81b887eafeb",
-        "name": "gpio",
-        "mode": "link",
-        "links": [
-            "9accd1669e4f749a",
-            "ae543e3ae4b54533"
-        ],
-        "x": 995,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "2ce9a2aa9a6ebad9",
-        "type": "websocket in",
-        "z": "76f2a81b887eafeb",
-        "name": "",
-        "server": "541d94e2a8a24745",
-        "client": "",
-        "x": 340,
-        "y": 440,
-        "wires": [
-            [
-                "d2a1ea1311cf743f"
-            ]
-        ]
-    },
-    {
-        "id": "d2a1ea1311cf743f",
-        "type": "link out",
-        "z": "76f2a81b887eafeb",
-        "name": "wakeword",
-        "mode": "link",
-        "links": [
-            "3e529b50f8baf693",
-            "abcdd2715594bca3"
-        ],
-        "x": 695,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "84c55c23798b2141",
-        "type": "http request",
-        "z": "76f2a81b887eafeb",
-        "name": "http://localhost:12101/api/text-to-speech",
-        "method": "POST",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "http://localhost:12101/api/text-to-speech",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "basic",
-        "senderr": false,
-        "x": 1260,
-        "y": 560,
-        "wires": [
-            [
-                "281bacc71604fa08"
-            ]
-        ]
-    },
-    {
-        "id": "9c0f96953720e7d9",
-        "type": "link in",
-        "z": "76f2a81b887eafeb",
-        "name": "Audio_Ausgabe",
-        "links": [
-            "57a7963c1506e4cd",
-            "d5c114e808e5d4a1",
-            "51dea5c48e19ccc4",
-            "bc59a60d7a37af23"
-        ],
-        "x": 855,
-        "y": 560,
-        "wires": [
-            [
-                "84c55c23798b2141"
-            ]
-        ]
-    },
-    {
-        "id": "9c1798fda4cefe2e",
-        "type": "link out",
-        "z": "76f2a81b887eafeb",
-        "name": "Muell",
-        "mode": "link",
-        "links": [
-            "ae543e3ae4b54533"
-        ],
-        "x": 995,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "d279f2438e8dda81",
-        "type": "switch",
-        "z": "76f2a81b887eafeb",
-        "name": "",
-        "property": "intent.name",
-        "propertyType": "msg",
-        "rules": [
+        "props": [
             {
-                "t": "eq",
-                "v": "ChangeLightState",
-                "vt": "str"
+                "p": "payload"
             },
             {
-                "t": "eq",
-                "v": "Get_Time",
+                "p": "topic",
                 "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Get_Date",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "GetTemperature",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Get_Witz",
-                "vt": "str"
-            },
-            {
-                "t": "else"
             }
         ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 6,
-        "x": 810,
-        "y": 300,
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 340,
         "wires": [
             [
-                "69a754436e5343ea"
-            ],
-            [
-                "43ad8a03fc453a1b"
-            ],
-            [
-                "43ad8a03fc453a1b"
-            ],
-            [
-                "7b9ff75a7f3932ea"
-            ],
-            [
-                "4b47b829b5d767ac"
-            ],
-            [
-                "9c1798fda4cefe2e"
+                "7d7e015775bd924c"
             ]
         ]
     },
     {
-        "id": "43ad8a03fc453a1b",
-        "type": "link out",
+        "id": "7d7e015775bd924c",
+        "type": "exec",
         "z": "76f2a81b887eafeb",
-        "name": "Uhrzeit",
-        "mode": "link",
-        "links": [
-            "273efd3f71bbc2bf",
-            "ae543e3ae4b54533"
-        ],
-        "x": 995,
+        "command": "vcgencmd measure_temp",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Raspberry CPU temp",
+        "x": 640,
+        "y": 340,
+        "wires": [
+            [
+                "4ab7889ea8127cfe"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "41c71e53c80a8fe6",
+        "type": "debug",
+        "z": "76f2a81b887eafeb",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
         "y": 240,
         "wires": []
     },
     {
-        "id": "7b9ff75a7f3932ea",
-        "type": "link out",
+        "id": "4ab7889ea8127cfe",
+        "type": "change",
         "z": "76f2a81b887eafeb",
-        "name": "Wetter",
-        "mode": "link",
-        "links": [
-            "191d2f269a0a3ca2",
-            "ae543e3ae4b54533"
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "temp=",
+                "fromt": "str",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "'C",
+                "fromt": "str",
+                "to": "",
+                "tot": "str"
+            }
         ],
-        "x": 995,
-        "y": 280,
-        "wires": []
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 360,
+        "wires": [
+            [
+                "41c71e53c80a8fe6",
+                "ebba298470ef2066"
+            ]
+        ]
     },
     {
-        "id": "4b47b829b5d767ac",
-        "type": "link out",
+        "id": "ebba298470ef2066",
+        "type": "ui_gauge",
         "z": "76f2a81b887eafeb",
-        "name": "Witz",
-        "mode": "link",
-        "links": [
-            "ae543e3ae4b54533",
-            "c713d84ffe78b8b9"
+        "name": "",
+        "group": "796aac26f756f946",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "CPU Temp",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
         ],
-        "x": 995,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "654f7e26cd220aa1",
-        "type": "link out",
-        "z": "76f2a81b887eafeb",
-        "name": "intentled",
-        "mode": "link",
-        "links": [
-            "cf4991c6077eface"
-        ],
-        "x": 555,
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1310,
         "y": 360,
         "wires": []
     },
     {
-        "id": "281bacc71604fa08",
-        "type": "link out",
-        "z": "76f2a81b887eafeb",
-        "name": "Stopp",
-        "mode": "link",
-        "links": [
-            "e95e0f17502fd129"
+        "id": "a97f890798d763de",
+        "type": "inject",
+        "z": "9d793f48ed5db80f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
         ],
-        "x": 1525,
-        "y": 560,
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 320,
+        "wires": [
+            [
+                "be3b49aeab83acc7"
+            ]
+        ]
+    },
+    {
+        "id": "be3b49aeab83acc7",
+        "type": "exec",
+        "z": "9d793f48ed5db80f",
+        "command": "free -h",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Get work memory utilization",
+        "x": 480,
+        "y": 320,
+        "wires": [
+            [
+                "3abadd78b96508f6"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "dccfa28fed52479e",
+        "type": "ui_gauge",
+        "z": "9d793f48ed5db80f",
+        "name": "",
+        "group": "f059812355c12d6a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Work Memory",
+        "label": "GB",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1460,
+        "y": 440,
         "wires": []
+    },
+    {
+        "id": "fa0d9cfdec3fbf1b",
+        "type": "string",
+        "z": "9d793f48ed5db80f",
+        "name": "Get_max_mem",
+        "methods": [
+            {
+                "name": "between",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": "Mem:"
+                    },
+                    {
+                        "type": "str",
+                        "value": "Gi"
+                    }
+                ]
+            }
+        ],
+        "prop": "payload",
+        "propout": "ui_control",
+        "object": "msg",
+        "objectout": "msg",
+        "x": 880,
+        "y": 220,
+        "wires": [
+            [
+                "8a941194eeeafe4b",
+                "e4b9bafd8ff9ab31"
+            ]
+        ]
+    },
+    {
+        "id": "8d7388d17e712443",
+        "type": "debug",
+        "z": "9d793f48ed5db80f",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8a941194eeeafe4b",
+        "type": "debug",
+        "z": "9d793f48ed5db80f",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "ui_control",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1440,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "3abadd78b96508f6",
+        "type": "string",
+        "z": "9d793f48ed5db80f",
+        "name": "Get_used",
+        "methods": [
+            {
+                "name": "between",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": "Gi"
+                    },
+                    {
+                        "type": "str",
+                        "value": "Mi"
+                    }
+                ]
+            }
+        ],
+        "prop": "payload",
+        "propout": "payload",
+        "object": "msg",
+        "objectout": "msg",
+        "x": 820,
+        "y": 400,
+        "wires": [
+            [
+                "8d7388d17e712443",
+                "00e7b9d85a990dc4"
+            ]
+        ]
+    },
+    {
+        "id": "e4b9bafd8ff9ab31",
+        "type": "function",
+        "z": "9d793f48ed5db80f",
+        "name": "",
+        "func": "msg.ui_control = {\"max\":msg.ui_control}\nmsg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 100,
+        "wires": [
+            [
+                "8a941194eeeafe4b",
+                "dccfa28fed52479e"
+            ]
+        ]
+    },
+    {
+        "id": "63b1450a5790628b",
+        "type": "exec",
+        "z": "9d793f48ed5db80f",
+        "command": "free -h",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Get work memory utilization",
+        "x": 480,
+        "y": 220,
+        "wires": [
+            [
+                "fa0d9cfdec3fbf1b"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "776862558540bc45",
+        "type": "inject",
+        "z": "9d793f48ed5db80f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "63b1450a5790628b"
+            ]
+        ]
+    },
+    {
+        "id": "00e7b9d85a990dc4",
+        "type": "function",
+        "z": "9d793f48ed5db80f",
+        "name": "",
+        "func": "if (msg.payload > 8)\n{\n // If used is in mb we divide it throug 1000 to obtain GB   \nmsg.payload = msg.payload/ 1000;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 420,
+        "wires": [
+            [
+                "dccfa28fed52479e"
+            ]
+        ]
+    },
+    {
+        "id": "1cfc77c2cd9604d6",
+        "type": "inject",
+        "z": "a653bc9d2e7ed8d6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 420,
+        "wires": [
+            [
+                "f5f0ceaad219cc84"
+            ]
+        ]
+    },
+    {
+        "id": "f5f0ceaad219cc84",
+        "type": "exec",
+        "z": "a653bc9d2e7ed8d6",
+        "command": "df -h",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Get sd card utilization",
+        "x": 400,
+        "y": 420,
+        "wires": [
+            [
+                "e029e17057606f71"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "130da3b6847df5c2",
+        "type": "ui_gauge",
+        "z": "a653bc9d2e7ed8d6",
+        "name": "",
+        "group": "b2576e7f32ec6ca2",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "SD-Card",
+        "label": "GB",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1380,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "5a855cd05b66e746",
+        "type": "string",
+        "z": "a653bc9d2e7ed8d6",
+        "name": "Get_size",
+        "methods": [
+            {
+                "name": "between",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": "/dev/root"
+                    },
+                    {
+                        "type": "str",
+                        "value": "G"
+                    }
+                ]
+            }
+        ],
+        "prop": "payload",
+        "propout": "ui_control",
+        "object": "msg",
+        "objectout": "msg",
+        "x": 800,
+        "y": 320,
+        "wires": [
+            [
+                "f63bf942b5857d6d",
+                "fa58d5e11f01e28e"
+            ]
+        ]
+    },
+    {
+        "id": "7b126acccb8413a5",
+        "type": "debug",
+        "z": "a653bc9d2e7ed8d6",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1330,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "f63bf942b5857d6d",
+        "type": "debug",
+        "z": "a653bc9d2e7ed8d6",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "ui_control",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e029e17057606f71",
+        "type": "string",
+        "z": "a653bc9d2e7ed8d6",
+        "name": "Get_used",
+        "methods": [
+            {
+                "name": "between",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": "G"
+                    },
+                    {
+                        "type": "str",
+                        "value": "G"
+                    }
+                ]
+            }
+        ],
+        "prop": "payload",
+        "propout": "payload",
+        "object": "msg",
+        "objectout": "msg",
+        "x": 760,
+        "y": 500,
+        "wires": [
+            [
+                "7b126acccb8413a5",
+                "130da3b6847df5c2"
+            ]
+        ]
+    },
+    {
+        "id": "fa58d5e11f01e28e",
+        "type": "function",
+        "z": "a653bc9d2e7ed8d6",
+        "name": "",
+        "func": "msg.ui_control = {\"max\":msg.ui_control}\nmsg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 200,
+        "wires": [
+            [
+                "f63bf942b5857d6d",
+                "130da3b6847df5c2"
+            ]
+        ]
+    },
+    {
+        "id": "34c767e61629a29e",
+        "type": "exec",
+        "z": "a653bc9d2e7ed8d6",
+        "command": "df -h",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Get sd card utilization",
+        "x": 400,
+        "y": 320,
+        "wires": [
+            [
+                "5a855cd05b66e746"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e3b9e1b5f568a39c",
+        "type": "inject",
+        "z": "a653bc9d2e7ed8d6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 320,
+        "wires": [
+            [
+                "34c767e61629a29e"
+            ]
+        ]
+    },
+    {
+        "id": "987fcac8bdd406a8",
+        "type": "inject",
+        "z": "9b4482b694ffc9f4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 350,
+        "y": 480,
+        "wires": [
+            [
+                "d0ee4b193a20457d"
+            ]
+        ]
+    },
+    {
+        "id": "d0ee4b193a20457d",
+        "type": "exec",
+        "z": "9b4482b694ffc9f4",
+        "command": "vmstat",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Get CPU Utilization",
+        "x": 610,
+        "y": 480,
+        "wires": [
+            [
+                "6303170edc94c41a"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "49d4d6653bfe2e81",
+        "type": "ui_gauge",
+        "z": "9b4482b694ffc9f4",
+        "name": "",
+        "group": "332991278a8f45e5",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "CPU-Utilization",
+        "label": "GB",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1360,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "56f9df92be0957b1",
+        "type": "debug",
+        "z": "9b4482b694ffc9f4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1490,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "6303170edc94c41a",
+        "type": "function",
+        "z": "9b4482b694ffc9f4",
+        "name": "",
+        "func": "msg.payload =100-(msg.payload[243-8]* 1 + msg.payload[243-7])\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 480,
+        "wires": [
+            [
+                "56f9df92be0957b1",
+                "49d4d6653bfe2e81"
+            ]
+        ]
     }
 ]

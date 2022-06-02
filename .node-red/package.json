@@ -6,6 +6,7 @@
   "dependencies": {
     "node-red-contrib-remote": "~1.4.0",
     "node-red-contrib-simpletime": "~2.10.4",
+    "node-red-contrib-string": "^1.0.0",
     "node-red-dashboard": "~3.1.7",
     "node-red-node-ping": "^0.3.1",
     "node-red-node-random": "^0.4.0",
