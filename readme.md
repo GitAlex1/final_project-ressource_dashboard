@@ -20,7 +20,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/GitAlex1/final_project-ressource_dashboard">
-    <img src="Dashboard.png" alt="Logo" width="1360" height="396">
+    <img src="Dashboard.png" alt="Logo" width="1600" height="396">
   </a>
 
 <h3 align="center">project_title</h3>
@@ -82,7 +82,7 @@ memory, hard disc storage cpu utilization and cpu temperature
 
 ### Built With
 
-* [Node-RED.js](https://nodered.org/)
+* [Node-RED](https://nodered.org/)
 * [Node.js](https://nodejs.org/en/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -98,7 +98,7 @@ So there is no guarantee for other devices
 ### Prerequisites
 
 To clone this repository and use its functionalities it is necessary to install git.
-* git
+* GIT
   ```sh
   sudo apt install git-all
   ```
@@ -127,7 +127,7 @@ Start the dashboard by entering the following command
    ```
 Stop it by using
    ```sh
-   ctrl +c
+   ctrl+c
    ```
 If the tool is used very often, it can also be added to the autostart routine
 
@@ -176,9 +176,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Alexander Hoppert  - alexanderhoppert@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/GitAlex1/final_project-ressource_dashboard](https://github.com/GitAlex1/final_project-ressource_dashboard)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
