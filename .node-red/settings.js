@@ -53,12 +53,12 @@ module.exports = {
      * the user's home directory. To use a different location, the following
      * property can be used
      */
-   // userDir: '/home/pi/final_project/.node-red/',
+   // userDir: 'home/alex/final_project/.node-red/',
 
     /** Node-RED scans the `nodes` directory in the userDir to find local node files.
      * The following property can be used to specify an additional directory to scan.
      */
-    //nodesDir: '/home/nol/.node-red/nodes',
+   // nodesDir: 'home/alex/final_project/.node-red/nodes',
 
 /*******************************************************************************
  * Security
@@ -90,10 +90,10 @@ module.exports = {
      */
 
     /** Option 1: static object */
-    https: {
-      key: require("fs").readFileSync('key.pem'),
-      cert: require("fs").readFileSync('cert.pem')
-    },
+    //https: {
+    //  key: require("fs").readFileSync('key.pem'),
+    //  cert: require("fs").readFileSync('cert.pem')
+    //},
 
     /** Option 2: function that returns the HTTP configuration object */
     // https: function() {
