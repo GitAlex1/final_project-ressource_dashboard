@@ -20,7 +20,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/GitAlex1/final_project-ressource_dashboard">
-    <img src="Dashboard.png" alt="Logo" width="1600" height="396">
+    <img src="Dashboard.png" alt="Logo" width="948" height="189">
   </a>
 
 <h3 align="center">project_title</h3>
