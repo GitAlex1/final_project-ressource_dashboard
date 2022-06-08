@@ -204,5 +204,5 @@ Project Link: [https://github.com/GitAlex1/final_project-ressource_dashboard](ht
 [issues-shield]: https://img.shields.io/github/issues/GitAlex1/final_project-ressource_dashboard.svg?style=for-the-badge
 [issues-url]: https://github.com/GitAlex1/final_project-ressource_dashboard/issues
 [license-shield]: https://img.shields.io/github/license/GitAlex1/final_project-ressource_dashboard.svg?style=for-the-badge
-[license-url]: https://github.com/GitAlex1/final_project-ressource_dashboard/blob/main/LICENCE.txt
+[license-url]: https://github.com/GitAlex1/final_project-ressource_dashboard/blob/main/LICENSE.txt
 [product-screenshot]: images/screenshot.png
