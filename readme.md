@@ -26,7 +26,6 @@
 <h3 align="center">Ressource Utilization Dashboard</h3>
 
   <p align="center">
-    <br />
     <a href="https://github.com/GitAlex1/final_project-ressource_dashboard"><strong>Explore the docs »</strong></a>
     <br />
     <br />
@@ -73,7 +72,7 @@
 The project is designed for a Raspberry Pi. The aim of the project is to equipp
 the Pi with a handy ressource managment tool comparable to the Windows Task
 manager. The actual version of the project provides a dashboard of the used
-memory, hard disc storage cpu utilization and cpu temperature
+memory, hard disc storage, cpu utilization and cpu temperature
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -124,7 +123,7 @@ Start the dashboard by entering the following command
    ```sh
    node-red
    ```
-After running the command the Raspberry will host the dashboard on port 1880 
+After running the command the Raspberry will host the dashboard on port 1880. 
 Example for accessing the dashboard:
 IP-adresse raspberry: 172.172.137.232
 Access the following link: 172.172.137.232:1880/ui
@@ -186,9 +185,6 @@ Project Link: [https://github.com/GitAlex1/final_project-ressource_dashboard](ht
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
