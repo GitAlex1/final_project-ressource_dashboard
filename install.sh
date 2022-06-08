@@ -5,13 +5,13 @@
 	sudo apt-get install python3-pip
 	pip install paho-mqtt
 	sudo apt-get install -y mosquitto mosquitto-clients
-    sudo mv -r .node-red ~/.node-red
+    sudo cp -r  .node-red ~
     cd ~/.node-red
     npm install 
     sudo cat > node-red  << _EOF_
      #!/bin/sh
      node-red
 _EOF_
-sudo chmod 777 node-red
+sudo chmod 755 node-red
 sudo mv node-red /etc/init.d
 node-red
