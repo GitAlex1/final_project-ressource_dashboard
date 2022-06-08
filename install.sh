@@ -8,10 +8,3 @@
     sudo cp -r  .node-red ~
     cd ~/.node-red
     npm install 
-    sudo cat > node-red  << _EOF_
-     #!/bin/sh
-     node-red
-_EOF_
-sudo chmod 755 node-red
-sudo mv node-red /etc/init.d
-node-red
