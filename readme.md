@@ -20,7 +20,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/GitAlex1/final_project-ressource_dashboard">
-    <img src="Dashboard.png" alt="Logo" width="80" height="80">
+    <img src="Dashboard.png" alt="Logo" width="1360" height="396">
   </a>
 
 <h3 align="center">project_title</h3>
@@ -46,7 +46,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">Project description</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -63,7 +63,6 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -72,9 +71,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+The project is designed for a Raspberry Pi. The aim of the project is to equipp
+the Pi with a handy ressource managment tool comparable to the Windows Task
+manager. The actual version of the project provides a dashboard of the used
+memory, hard disc storage cpu utilization and cpu temperature
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -82,14 +82,8 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Node-RED.js](https://nodered.org/)
+* [Node.js](https://nodejs.org/en/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -98,31 +92,26 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+The provided software should run on every Linux device. However it is only tested on a Raspberry Pi model 4.
+So there is no guarantee for other devices
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+To clone this repository and use its functionalities it is necessary to install git.
+* git
   ```sh
-  npm install npm@latest -g
+  sudo apt install git-all
   ```
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/GitAlex1/final_project-ressource_dashboard.git
    ```
-3. Install NPM packages
+2. Run installation script in the repository folder
    ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+   sudo ./install.sh
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -132,9 +121,15 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+Start the dashboard by entering the following command
+   ```sh
+   node-red
+   ```
+Stop it by using
+   ```sh
+   ctrl +c
+   ```
+If the tool is used very often, it can also be added to the autostart routine
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -143,10 +138,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] Process overview
+- [ ] Process killing mechanisms
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
@@ -157,10 +150,9 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+If you have a suggestion for improvements, or if you want to implement the features on the roadmap, please fork the repo and create a pull request. 
+You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks!
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -191,13 +183,6 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
