@@ -930,7 +930,7 @@
         "type": "function",
         "z": "9b4482b694ffc9f4",
         "name": "",
-        "func": "msg.payload =100-(msg.payload[243-8]* 1 + msg.payload[243-7])\nreturn msg;",
+        "func": "msg.payload =100-(msg.payload[243-8]* 1 + msg.payload[243-7]+msg.payload[243-6])\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",

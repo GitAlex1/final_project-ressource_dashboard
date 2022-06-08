@@ -892,7 +892,7 @@
         "height": 0,
         "gtype": "gage",
         "title": "CPU-Utilization",
-        "label": "GB",
+        "label": "%",
         "format": "{{value}}",
         "min": 0,
         "max": "100",
