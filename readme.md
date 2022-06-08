@@ -20,7 +20,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/GitAlex1/final_project-ressource_dashboard">
-    <img src="Dashboard.png" alt="Logo" width="948" height="189">
+    <img src="Dashboard.png" alt="Logo" width="948" height="18">
   </a>
 
 <h3 align="center">project_title</h3>
@@ -199,5 +199,5 @@ Project Link: [https://github.com/GitAlex1/final_project-ressource_dashboard](ht
 [issues-shield]: https://img.shields.io/github/issues/GitAlex1/final_project-ressource_dashboard.svg?style=for-the-badge
 [issues-url]: https://github.com/GitAlex1/final_project-ressource_dashboard/issues
 [license-shield]: https://img.shields.io/github/license/GitAlex1/final_project-ressource_dashboard.svg?style=for-the-badge
-[license-url]: https://mit-license.org/
+[license-url]: https://github.com/GitAlex1/final_project-ressource_dashboard/blob/master/LICENSE.txt
 [product-screenshot]: images/screenshot.png
