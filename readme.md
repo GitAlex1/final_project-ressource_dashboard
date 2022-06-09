@@ -91,7 +91,8 @@ memory, hard disc storage, cpu utilization and cpu temperature
 ## Getting Started
 
 The provided software should run on every Linux device. However it is only tested on a Raspberry Pi model 4.
-So there is no guarantee for other devices
+So there is no guarantee for other devices. For a detailed description of the setup, watch my You Tube tutorial
+https://youtu.be/z2gKNcqrtlk
 
 ### Prerequisites
 
@@ -184,6 +185,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 Alexander Hoppert  - alexanderhoppert@gmail.com
 
 Project Link: [https://github.com/GitAlex1/final_project-ressource_dashboard](https://github.com/GitAlex1/final_project-ressource_dashboard)
+
+You Tube: https://youtu.be/z2gKNcqrtlk
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
