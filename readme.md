@@ -127,7 +127,6 @@ After running the command the Raspberry will host the dashboard on port 1880.
 Example for accessing the dashboard:
 IP-adresse raspberry: 172.172.137.232
 Access the following link: 172.172.137.232:1880/ui
-For developement of new features access 172.172.137.232:1880
 Stop it by using
    ```sh
    ctrl+c
